@@ -20,7 +20,7 @@ info:
     url: https://keykeeper.world
 
 servers:
-  - url: https://keyworker.world/v1
+  - url: https://keywork.world/v1
     description: Production server
 
 tags:

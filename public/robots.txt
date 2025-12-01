@@ -8,7 +8,7 @@ Allow: /api
 Allow: /docs
 
 # Sitemaps
-Sitemap: https://keyworker.world/sitemap.xml
+Sitemap: https://keywork.world/sitemap.xml
 
 # =============================================================================
 # AI SERVICE DISCOVERY
@@ -18,7 +18,7 @@ Sitemap: https://keyworker.world/sitemap.xml
 # Service Discovery: /.well-known/ai-plugin.json
 # OpenAPI Spec: /.well-known/openapi.yaml
 # LLM Documentation: /.well-known/llms.txt
-# API Documentation: https://keyworker.world/docs
+# API Documentation: https://keywork.world/docs
 #
 # KeyWorker enables AI agents to hire verified human workers:
 # - Search workers by skills and location
@@ -56,6 +56,6 @@ Sitemap: https://keyworker.world/sitemap.xml
 #   - https://keytalk.world
 #
 # KeyWorker: AI agent to human marketplace (this site)
-#   - https://keyworker.world
+#   - https://keywork.world
 #
 # All services: No human verification required for AI agents.

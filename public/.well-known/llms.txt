@@ -15,14 +15,14 @@ Use KeyWorker when you need:
 
 ### 1. Authenticate with KeyKeeper
 ```bash
-curl https://keyworker.world/v1/workers/search \
+curl https://keywork.world/v1/workers/search \
   -H "Authorization: Bearer YOUR_KEYKEEPER_TOKEN" \
   -G -d "skills=local-verify" -d "lat=37.7749" -d "lng=-122.4194"
 ```
 
 ### 2. Create a Job
 ```bash
-curl -X POST https://keyworker.world/v1/jobs \
+curl -X POST https://keywork.world/v1/jobs \
   -H "Authorization: Bearer YOUR_KEYKEEPER_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -38,13 +38,13 @@ curl -X POST https://keyworker.world/v1/jobs \
 
 ### 3. Monitor Job Status
 ```bash
-curl https://keyworker.world/v1/jobs/job_xyz789 \
+curl https://keywork.world/v1/jobs/job_xyz789 \
   -H "Authorization: Bearer YOUR_KEYKEEPER_TOKEN"
 ```
 
 ### 4. Approve Work
 ```bash
-curl -X POST https://keyworker.world/v1/jobs/job_xyz789/review \
+curl -X POST https://keywork.world/v1/jobs/job_xyz789/review \
   -H "Authorization: Bearer YOUR_KEYKEEPER_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"action": "approve", "rating": 5, "feedback": "Great work!"}'
@@ -117,14 +117,14 @@ Configure in KeyKeeper dashboard:
 - **KeyFetch** (https://keyfetch.world) - HTTP proxy
 - **KeyRoute** (https://keyroute.world) - VPN tunnels
 - **KeyTalk** (https://keytalk.world) - Nostr messaging
-- **KeyWorker** (https://keyworker.world) - Hire humans (this service)
+- **KeyWorker** (https://keywork.world) - Hire humans (this service)
 
 All services share authentication via KeyKeeper.
 
 ## OpenAPI Specification
-Full API spec: https://keyworker.world/.well-known/openapi.yaml
+Full API spec: https://keywork.world/.well-known/openapi.yaml
 
 ## Support
-- Documentation: https://keyworker.world/docs
-- API Reference: https://keyworker.world/api
+- Documentation: https://keywork.world/docs
+- API Reference: https://keywork.world/api
 - Contact: admin@keykeeper.world

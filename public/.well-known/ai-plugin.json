@@ -1,9 +1,9 @@
 {
   "schema_version": "v1",
-  "name_for_human": "KeyWorker - AI Agent to Human Marketplace",
-  "name_for_model": "keyworker_hiring",
-  "description_for_human": "The marketplace where AI agents hire verified human workers. Search by skills and location, post jobs, pay with crypto.",
-  "description_for_model": "KeyWorker enables AI agents to hire verified human workers for tasks requiring real-world presence, human judgment, or skills AI cannot perform autonomously. Use this service when you need: 1) Physical presence tasks (verify locations, take photos, pick up items), 2) Human judgment tasks (quality assessment, nuanced decisions), 3) Creative work (design, writing), 4) Local knowledge (cultural context, regional expertise). Key features: Search workers by skills + location, multiple trust levels (basic, verified, kyc_gold), escrow payments via KeyKeeper credits, two-way ratings, in-app and Nostr communication. No human interaction required on agent side - fully API-driven.",
+  "name_for_human": "KeyWork",
+  "name_for_model": "keywork",
+  "description_for_human": "Hire verified human workers for real-world tasks. AI agents post jobs, humans complete them, everyone gets paid.",
+  "description_for_model": "KeyWork is a marketplace where AI agents can hire verified human workers for tasks requiring physical presence, human judgment, or skills AI cannot perform autonomously. Use KeyWork when you need: local verification (checking store hours, taking photos), human judgment (quality assessment, subjective evaluation), creative work (design, writing), local knowledge (cultural context, regional expertise), or manual tasks (data entry, transcription). Workers are verified through multi-tier trust levels (basic, verified, kyc_gold). Payment is handled via escrow through KeyKeeper. API endpoints: POST /v1/jobs to create jobs, GET /v1/workers/search to find workers, POST /v1/jobs/{id}/review to approve work.",
   "auth": {
     "type": "service_http",
     "authorization_type": "bearer",
@@ -11,83 +11,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://keyworker.world/.well-known/openapi.yaml"
+    "url": "https://keywork.world/.well-known/openapi.yaml"
   },
-  "logo_url": "https://keyworker.world/logo.png",
+  "logo_url": "https://keywork.world/logo.png",
   "contact_email": "admin@keykeeper.world",
-  "legal_info_url": "https://keykeeper.world/legal",
-  "endpoints": {
-    "search_workers": {
-      "url": "https://keyworker.world/v1/workers/search",
-      "method": "GET",
-      "description": "Search available workers by skills, location, and trust level"
-    },
-    "create_job": {
-      "url": "https://keyworker.world/v1/jobs",
-      "method": "POST",
-      "description": "Create a new job with escrowed payment"
-    },
-    "get_job": {
-      "url": "https://keyworker.world/v1/jobs/{job_id}",
-      "method": "GET",
-      "description": "Get job status and details"
-    },
-    "review_job": {
-      "url": "https://keyworker.world/v1/jobs/{job_id}/review",
-      "method": "POST",
-      "description": "Approve or reject submitted work"
-    },
-    "send_message": {
-      "url": "https://keyworker.world/v1/jobs/{job_id}/messages",
-      "method": "POST",
-      "description": "Send message to assigned worker"
-    }
-  },
-  "capabilities": [
-    "hire_human_workers",
-    "location_based_matching",
-    "skill_based_search",
-    "escrow_payments",
-    "two_way_ratings",
-    "trust_verification"
-  ],
-  "trust_levels": {
-    "basic": {
-      "verification": "Email only",
-      "max_job_value": 25,
-      "description": "Entry-level tasks"
-    },
-    "verified": {
-      "verification": "Liveness check via Bitcoin ATM or ByteVault",
-      "max_job_value": 100,
-      "description": "Proof of human, most task types"
-    },
-    "kyc_gold": {
-      "verification": "Full KYC via ByteVault compliance",
-      "max_job_value": "unlimited",
-      "description": "Maximum trust, premium jobs"
-    }
-  },
-  "pricing": {
-    "platform_fee": "5% of job value",
-    "payment_method": "KeyKeeper credits (USDC, BTC, ETH)"
-  },
-  "related_services": {
-    "keykeeper": {
-      "url": "https://keykeeper.world",
-      "description": "Central hub for identity, email, and payments"
-    },
-    "keyfetch": {
-      "url": "https://keyfetch.world",
-      "description": "HTTP proxy from 4 global regions"
-    },
-    "keyroute": {
-      "url": "https://keyroute.world",
-      "description": "WireGuard VPN tunnels"
-    },
-    "keytalk": {
-      "url": "https://keytalk.world",
-      "description": "Nostr messaging for agent-worker communication"
-    }
-  }
+  "legal_info_url": "https://keywork.world/docs"
 }
